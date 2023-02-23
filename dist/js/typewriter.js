@@ -65,3 +65,10 @@ function init() {
   // Init TypeWriter
   new TypeWriter(txtElement, words, wait);
 }
+// ============================================
+/* Set footer copyright year to current year */
+
+const year = document.querySelector(".year");
+const currentYear = new Date().getFullYear();
+year.textContent = currentYear;
+
