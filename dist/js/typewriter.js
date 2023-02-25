@@ -72,3 +72,46 @@ const year = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 year.textContent = currentYear;
 
+/* Time Zones */
+
+// London
+const getLondonTime = () => {
+  document.querySelector(".london-time").innerHTML = new Date().toLocaleString(
+    "en-GB",
+    {
+      timeZone: "Europe/London",
+      timeStyle: "medium",
+      hourCycle: "h24",
+    }
+  );
+};
+getLondonTime();
+setInterval(getLondonTime, 1000);
+
+//Rome
+const getRomeTime = () => {
+  document.querySelector(".rome-time").innerHTML = new Date().toLocaleString(
+    "en-GB",
+    {
+      timeZone: "Europe/Rome",
+      timeStyle: "medium",
+      hourCycle: "h24",
+    }
+  );
+};
+getRomeTime();
+setInterval(getRomeTime, 1000);
+
+//Dubai
+const getDubaiTime = () => {
+  document.querySelector(".dubai-time").innerHTML = new Date().toLocaleString(
+    "en-GB",
+    {
+      timeZone: "Asia/Dubai",
+      timeStyle: "medium",
+      hourCycle: "h24",
+    }
+  );
+};
+getDubaiTime();
+setInterval(getDubaiTime, 1000);
