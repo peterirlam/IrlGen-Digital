@@ -1,0 +1,62 @@
+$website-width: 1280px;
+
+$pink: #f17eb0;
+
+$light-purple: #efdffa;
+$dark-purple: #d1a3f5;
+
+$light-blue: #deecfb;
+$medium-blue: #98b7fe;
+$navy-blue: #4243f0;
+$dark-blue: #0d1a39;
+// change above to primary-light etc
+$light-green: #cef2cf;
+$medium-green: #6ee0ae;
+$dark-green: #3ea479;
+
+$light-yellow: #fafcad;
+$yellow: #fefb75;
+// change below to light-gray etc
+$light-color: #f4f4f4;
+$medium-color: #555;
+$dark-color: #363636;
+/*
+//link colors
+#4243f0 link  (navy-blue)
+#ebe8fa btn bg color
+#efdffa btn hover color
+
+// general text color scheme
+#fefb75
+#3ea479
+#6ee0ae
+
+#efdffa //light-purple
+#d1a3f5 //dark-purple
+
+#deecfb // light-blue
+#98b7fe // medium-blue
+Background colors:
+//whites
+#f9f9f9
+//Grays
+#252829
+#2d3a3b
+//Blues
+#0d1a39
+*/
+
+/* Header background image */
+$bg-image: url("../img/showcase.webp");
+$bg-image-tab-l: url("../img/showcase-tablet-l.webp");
+
+
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return $dark-color;
+  } @else {
+    @return $light-color;
+  }
+}
+
+
