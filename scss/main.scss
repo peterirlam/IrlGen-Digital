@@ -1,0 +1,541 @@
+@import "config";
+@import "utilities";
+@import "item_grid";
+
+// General Styles
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: $medium-color;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+ul {
+  list-style: none;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+img {
+  width: 100%;
+}
+
+// Logo
+#logo {
+  width: 280px;
+  height: 70px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+// **********
+// MAIN NAV
+// **********
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding: 1rem 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid; 
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+
+    &:hover {
+      border-color: $light-blue; 
+    }
+
+    &.current {
+      border-color: $yellow;
+    }
+  }
+}
+// ************
+// HEADER
+// ************
+
+#header {
+  // Header Home
+  &-home {
+    background: $bg-image no-repeat center right / cover;
+    height: 100vh;
+    color: #fff;
+
+    // Header Content
+    .header-content {
+      text-align: center;
+      padding-top: 20%;
+
+      h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  // Header Inner
+  &-inner {
+    background: $bg-image no-repeat top / cover;
+    height: 6.5rem;
+    border-bottom: 3px solid $dark-purple;
+  }
+}
+// ***************
+// HOME SECTIONS
+// ***************
+
+// Home Section A: Logos 
+#home {
+  &-a {
+    .home-logos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2rem;
+
+      img {
+        width: 70%;
+        filter: brightness(0); 
+        opacity: 0.4; 
+      }
+    }
+  }
+  // Home Section B: Specialize
+  &-b {
+    .specials {
+      margin: 3rem 0 1.4rem 0;
+      display: grid;
+      grid-gap: 1.2rem;
+      grid-template-columns: repeat(4, 1fr);
+
+      .fas {
+        color: $navy-blue;
+        padding-bottom: 0.4rem;
+      }
+
+      .specials-heading {
+        margin-bottom: 1.2rem;
+      }
+    }
+  }
+
+  //Home Section C: Tech Stack
+  &-c {
+    .progress {
+      overflow: hidden;
+      height: 20px;
+      background-color: $light-purple;
+      border-radius: 5px;
+      margin-bottom: 0.8rem;
+
+      div {
+        height: 100%;
+        color: #fff;
+        text-align: center;
+        background-color: $dark-purple;
+      }
+    }
+  }
+
+  // Home Section D: How it works 
+  &-d {
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1.6rem;
+      text-align: center;
+      margin-bottom: 1.4rem;
+
+      &-icon {
+        border-radius: 50%;
+        background-color: $navy-blue;
+        color: #fff;
+        padding: 2rem;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        position: relative;
+        transition: all 0.4s;
+
+        &:hover {
+          background-color: $medium-blue;
+          transform: scale(1.1);
+
+          .process-step {
+            background-color: $medium-color;
+            color: $light-color;
+          }
+        }
+      }
+
+      &-step {
+        position: absolute;
+        top: 0;
+        right: 0; 
+        font-size: 20px;
+        background-color: $yellow;
+        color: $medium-color;
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        line-height: 15px; 
+        padding: 1rem;
+        transition: all 0.4s;
+      }
+
+      &-list-heading {
+        margin-bottom: 1.3rem;
+      }
+
+      &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1.4rem;
+        text-align: left;
+      }
+
+      &-item {
+        display: flex;
+        gap: 7px;
+      }
+
+      .fa-chevron-right {
+        margin-right: auto;
+        margin-top: 4.5px;
+        color: $navy-blue;
+      }
+
+      .contact {
+        color: #120a00;
+        text-decoration: underline;
+        font-weight: bolder;
+      }
+
+      .contact:hover {
+        color: $navy-blue;
+      }
+    }
+  }
+}
+// *************
+// WORK SECTIONS
+//**************
+
+#work {
+  // work intro
+  &-a {
+    background-color: $light-blue;
+    .work-intro {
+      display: grid;
+      grid-template-areas: 
+        "aboutimage about about about"
+        "awards awards awards awards" 
+        "aw1 aw2 aw3 aw4";
+      grid-gap: 1.2rem;
+    }
+
+    // Grid Area
+    .about-image {
+      grid-area: aboutimage;
+      background: url(../img/about.png) no-repeat top left / cover;
+    }
+
+    .about {
+      grid-area: about;
+      border-left: 3px solid $navy-blue;
+      padding: 0.8rem;
+
+      &-text {
+        color: $medium-color;
+      }
+    }
+
+    .awards {
+      grid-area: awards;
+      margin-top: 2.6rem;
+    }
+
+    .award-1 {
+      grid-area: aw1;
+    }
+
+    .award-2 {
+      grid-area: aw2;
+    }
+
+    .award-3 {
+      grid-area: aw3;
+    }
+    .award-4 {
+      grid-area: aw4;
+    }
+
+    .award-1,
+    .award-2,
+    .award-3,
+    .award-4 {
+      margin: 1rem;
+    }
+    .award-img {
+      max-width: 12rem;
+      height: 12rem;
+    }
+  }
+  // Testimonials
+  &-c {
+    background-color: $light-purple;
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 0.5rem;
+
+      &-items {
+        display: flex;
+        flex-direction: column;
+      }
+
+      ul {
+        list-style: none;
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+      }
+
+      &-text {
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      img {
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+      }
+
+      &-name {
+        font-size: 0.9rem;
+        color: lighten($medium-color, 10%);
+      }
+    }
+  }
+}
+// ************
+// Contact Page
+// ************
+
+// Contact form
+#contact {
+  &-a {
+    margin-bottom: 4rem;
+
+    .text-fields {
+      display: grid;
+      grid-template-areas:
+        "name email"
+        "subject phone"
+        "message message";
+      grid-gap: 1.2rem;
+      // margin-bottom: 1.2rem;
+
+      // Grid Areas
+      .name-input {
+        grid-area: name;
+      }
+      .subject-input {
+        grid-area: subject;
+      }
+      .email-input {
+        grid-area: email;
+      }
+      .phone-input {
+        grid-area: phone;
+      }
+      .message-input {
+        grid-area: message;
+        height: 100px;
+      }
+
+      .text-input {
+        padding: 0.5rem 1rem;
+        font-family: inherit;
+      }
+
+      .text-input::placeholder {
+        color: lighten($medium-color, 30%);
+      }
+    }
+
+    button[type="submit"] {
+      width: 50%;
+      font-size: large;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-block;
+      padding: 0.8rem 0;
+      transition: all 0.5s;
+      border: none;
+      cursor: pointer;
+      background-color: $medium-blue;
+      color: $medium-color;
+    }
+
+    button[type="submit"]:hover {
+      background-color: $navy-blue;
+      color: $light-color;
+    }
+  }
+
+  // ======================================
+  // Connect with one of our global offices
+
+  &-b {
+    .connect {
+      padding: 2rem;
+    }
+
+    .time-zone {
+      display: inline-block;
+      width: 6rem;
+      margin-left: 1rem;
+      text-align: left;
+      color: lighten($medium-color, 10%);
+      font-weight: 100;
+    }
+
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr)); 
+      grid-template-areas:
+        "city1 city1 city1"
+        "email1 phone1 address1"
+        "city2 city2 city2"
+        "email2 phone2 address2"
+        "city3 city3 city3"
+        "email3 phone3 address3";
+      text-align: center;
+      margin-bottom: 5rem;
+
+      & p,
+      & a {
+        color: lighten($medium-color, 10%);
+      }
+
+      .city1 {
+        grid-area: city1;
+        margin: 2.6rem 0 1.6rem 0;
+      }
+      .email1 {
+        grid-area: email1;
+      }
+      .phone1 {
+        grid-area: phone1;
+      }
+      .address1 {
+        grid-area: address1;
+      }
+      .city2 {
+        grid-area: city2;
+        margin: 3rem 0 1.6rem 0;
+        padding-top: 3rem;
+        border-top: 3px solid $dark-purple;
+        // position: relative;
+      }
+      .email2 {
+        grid-area: email2;
+      }
+      .phone2 {
+        grid-area: phone2;
+      }
+      .address2 {
+        grid-area: address2;
+      }
+      .city3 {
+        grid-area: city3;
+        margin: 3rem 0 1.6rem 0;
+        padding-top: 3rem;
+        border-top: 3px solid $dark-purple;
+        // position: relative;
+      }
+      .email3 {
+        grid-area: email3;
+      }
+      .phone3 {
+        grid-area: phone3;
+      }
+      .address3 {
+        grid-area: address3;
+      }
+      .fas {
+        color: $medium-color;
+      }
+    }
+  }
+}
+
+// Footer
+#main-footer {
+  justify-content: center;
+  background: $dark-color;
+  color: darken($light-color, 15%);
+  height: 7rem;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: inherit;
+    align-items: center;
+
+    .social {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .fab {
+      border: 2px darken($light-color, 15%) solid;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      text-align: center;
+      padding: 0.5rem;
+
+      &:hover {
+        background: $dark-purple;
+        border: 2px $navy-blue solid;
+        color: $navy-blue;
+      }
+    }
+  }
+}
+
+@import "media";
