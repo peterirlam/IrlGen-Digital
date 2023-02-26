@@ -1,0 +1,299 @@
+// Tablet landscape 1200px
+@media (max-width: 1200px) {
+  #header-home {
+    background: $bg-image-tab-l no-repeat center right / cover;
+    height: 30rem;
+
+    .header-content {
+      padding-top: 5rem;
+    }
+  }
+  #home {
+    &-b .specials-heading {
+      font-size: 1rem;
+    }
+    &-b .specials p {
+      font-size: 0.9rem;
+    }
+    &-d .process-list-heading {
+      font-size: 1rem;
+    }
+    &-d .process-list span {
+      font-size: 0.9rem;
+    }
+  }
+}
+// Design breakdown at 1000px
+@media (max-width: 1000px) {
+  #home {
+    &-d .process {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  #work-c .testimonials {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Tablet portrait 900px (was 800)
+@media (max-width: 900px) {
+  #header-home {
+    height: 30rem;
+
+    .header-content {
+      padding-top: 5rem;
+      h1 {
+        font-size: 3rem;
+      }
+      .lead {
+        font-size: 1rem;
+      }
+    }
+  }
+  #home {
+    &-b .specials {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  #work {
+    &-a,
+    &-b,
+    &-c {
+      h2 {
+        font-size: 1.8rem;
+      }
+      .lead {
+        font-size: 1.1rem;
+      }
+    }
+    &-a {
+      .about-image {
+        display: none;
+      }
+    }
+    &-a {
+      .about {
+        grid-column: 1 / 5;
+      }
+    }
+    &-b {
+      .items {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    &-b {
+      .item:last-of-type {
+        display: none;
+      }
+    }
+  }
+  #contact {
+    &-a {
+      h2 {
+        font-size: 1.8rem;
+      }
+      .lead {
+        font-size: 1.1rem;
+      }
+    }
+    &-b {
+      .connect {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+// Design breakdown at 700px
+@media (max-width: 700px) {
+  #work {
+    &-b {
+      .items {
+        grid-template-columns: 1fr;
+      }
+    }
+    &-c {
+      .testimonials {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+   #contact {
+    &-a {
+      .text-fields {
+        grid-template-areas:
+          "name"
+          "subject"
+          "email"
+          "phone"
+          "message";
+      }
+    }
+    &-b {
+      .contact-info {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "connect"
+          "city1"
+          "email1"
+          "phone1"
+          "address1"
+          "city2"
+          "email2"
+          "phone2"
+          "address2"
+          "city3"
+          "email3"
+          "phone3"
+          "address3";
+      }
+      .contact-info {
+        .city1, .city2, .city3 {
+          border-top: none;
+          margin: 1rem 0 0.5rem 0;
+        }
+      }
+      div {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px #555 solid;
+
+        &:last-child {
+          border: none;
+          margin-bottom: 0;
+          padding-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// Smartphones 600px (was 500)
+@media (max-width: 600px) {
+  #main-nav {
+    flex-direction: column;
+    align-items: center;
+
+    li {
+      padding: 1rem;
+    }
+  }
+  #header {
+    &-home {
+      height: 10rem;
+      border-bottom: 3px solid $dark-purple;
+      background-position: 0% 60%;
+
+      .header-content {
+        display: none;
+      }
+    }
+    &-inner {
+      height: 10rem;
+      background: $bg-image-tab-l no-repeat center right / cover;
+      background-position: 0% 60%;
+    }
+  }
+  // Stack Grid Columns 
+  #home-b .specials,
+  #home-b .stats,
+  #home-d .process, 
+  .items {
+    grid-template-columns: 1fr;
+  }
+
+  // Home
+  #home {
+    &-a {
+      .specials div {
+        border-bottom: 1px $light-color solid;
+        padding-bottom: 1rem;
+
+        &:last-child {
+          border: none;
+          padding-bottom: 0;
+        }
+      }
+    }
+    &-b {
+      .stats div {
+        padding: 2rem 0 1rem 0;
+      }
+    }
+    &-d .process .fa-chevron-right {
+      margin-right: 0;
+    }
+  }
+  // Work
+  #work {
+    &-a .work-intro {
+        grid-template-areas: 
+        "about"
+        "awards"
+        "aw1"
+        "aw2"
+        "aw3"
+        "aw4"
+    }
+    &-a {
+      .awards {
+        grid-column: 1 / 5;
+        margin-top: 1rem;
+      }
+    }
+    &-a {
+      .award-1, .award-2, .award-3, .award-4 {
+        grid-column: 1 / 5;
+        margin: 0;
+      }
+    }
+    &-a {
+      .award-img {
+        max-width: 8rem;
+        height: auto;
+      }
+    }
+  }
+  // Contact
+ 
+  // Footer
+  #main-footer {
+    height: 7rem;
+
+    .footer-content {
+      flex-direction: column;
+      padding: 1rem;
+      height: 5rem;
+    }
+  }
+}
+// Remove background-image on very narrow devices
+@media (max-width: 480px) {
+  #header {
+    &-home,
+    &-inner {
+      background-image: none;
+      background-color: #072a6b;
+    }
+  }
+}
+
+// Landscape height
+@media (max-height: 580px) {
+  #header-home {
+    .header-content {
+      padding-top: 3rem;
+    }
+  }
+}
+
+@media (max-height: 330px) {
+  #header-home {
+    .header-content {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
