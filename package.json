@@ -1,0 +1,14 @@
+{
+  "name": "irlgen_digital",
+  "version": "1.0.0",
+  "description": "Personal project using Sass to create an award-winning digital agency",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss:dist/css"
+  },
+  "author": "Peter Irlam",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
