@@ -6,7 +6,7 @@ A personal project built using HTML, SASS and JavaScript. Color palette inspirat
 
 Featuring:
 
-- Javascript typewriter effect on home page
+- JavaScript typewriter effect on home page
 - Stunning hover animation effects in the 'Featured Case Studies' section
 - Fully mobile responsive layout using CSS Grid and flexbox
 
