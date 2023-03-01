@@ -272,7 +272,7 @@ img {
 #main-nav li {
   padding: 1rem 1.5rem;
 }
-#main-nav a {
+.nav-links {
   text-decoration: none;
   color: #fff;
   text-transform: uppercase;
@@ -280,13 +280,12 @@ img {
   padding-bottom: 0.5rem;
   transition: border-color 0.5s;
 }
-#main-nav a:hover {
+.nav-links:hover {
   border-color: #deecfb; 
 }
-#main-nav a.current {
+.nav-links.current {
   border-color: #fefb75;
 }
-
 #header-home {
   background: url("../img/showcase.webp") no-repeat center right/cover;
   height: 100vh;
