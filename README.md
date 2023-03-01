@@ -44,7 +44,7 @@ CSS cannot offer.
 The time zone displays for the 3 offices. I originally thought this would be a cool feature but I don't like the overall 
 design - it looks rather basic and a little amateurish. 
 
-Practical applications: In a real world scenaria it could potentially confuse a user, especially
+Practical applications: In a real world scenario it could potentially confuse a user, especially
 one who's not very IT literate - "Do I use the contact form, or email an office? If I do fill out the contact form, which office will receive it?". 
 
 I may replace this section with some more 'social proof'. The testimonial section on the work page is clean and functional 
