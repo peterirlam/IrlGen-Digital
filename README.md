@@ -27,7 +27,7 @@ or enjoy the preview video instead :smile:
 
 I wanted to showcase my ability in SASS
 
-## 🏗️ &nbsp; How I Worked on This Project (This might be a bit overkill at this stage except last point - Julia and Sean do not include this)
+## 🏗️ &nbsp; How I Worked on This Project
 
 - I built this app using the branding colors of Siteground as inspiration: [Siteground](https://www.siteground.co.uk/)
 - I worked with tasks using Trello as a project management tool 
