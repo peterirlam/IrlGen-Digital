@@ -23,10 +23,6 @@ or enjoy the preview video instead :smile:
 - [x] SASS
 - [x] JavaScript
 
-## 🎱 &nbsp; Why I Chose This Project
-
-I wanted to showcase my ability in SASS
-
 ## 🏗️ &nbsp; How I Worked on This Project
 
 - I built this app using the branding colors of Siteground as inspiration: [Siteground](https://www.siteground.co.uk/)
@@ -35,9 +31,7 @@ I wanted to showcase my ability in SASS
 
 ## Why I Built the Project using SASS
 
-Back in 2021 I had no knowledge of SASS. I realised that this was a weakness that I needed to address as many companies
-use SASS to help dry up their code for large applications as well as taking advantage of the built-in features which
-CSS cannot offer.
+I love how CSS can take a mundane website and transform it into a modern, elegant design. But now I'm hearing about how great Sass is and I wanted to understand how this 'preprocessor' works.
 
 ## ⏲️ &nbsp; If I Had More Time I Would Change
 
